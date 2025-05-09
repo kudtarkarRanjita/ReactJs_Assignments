@@ -44,6 +44,10 @@ const Home = () => {
     newTodos.splice(index, 1);
     setTodos(newTodos);
   }
+  const handleLogout = () => {
+    dispatch(clearToken());
+    navigate("/");
+  };
   return (
     <div>
       <h1>Todo List</h1>
@@ -111,6 +115,10 @@ const Home = () => {
           ))}
         </div>
       </form>
+
+      <button className="btn btn-danger mt-3" onClick={handleLogout}>
+        Logout
+      </button>
     </div>
   );
 };
