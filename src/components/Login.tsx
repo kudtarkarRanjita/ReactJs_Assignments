@@ -48,7 +48,7 @@ function Login() {
       //const data = await response.json();
 
       dispatch(setToken("QpwL5tke4Pnpja7X4")); // Store in Redux store
-      navigate("/Home"); // Redirect to home page after successful login
+      navigate("/InvestmentCalculator"); // Redirect to home page after successful login
     } catch (error) {
       if (error instanceof Error) {
         setError(error.message);
